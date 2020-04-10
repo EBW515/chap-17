@@ -74,4 +74,22 @@ BibleNames <-
   readr::read_csv("http://tiny.cc/dcf/BibleNames.csv")
 ```
 
+```{r}
+NamesWith<-BibleNames%>%group_by(name)%>%filter(grepl(pattern = "^Bar|bar...$|bar$|^Dam|dam$...$|dam$|^Lory|lory...$|lory$",name))
+NamesWith
+```
+```{r}
+EndWith<-
+  BibleNames%>%
+  group_by(name)%>%filter(grepl(pattern = "bar$|dam$|lory$",name))
+EndWith
+```
+### Problem 17.7
+```{r}
+TotalBabies<-
+  BibleNames%>%
+  left_join(BabyNames,by=c("name"="name"))%>%
+  group_by(name)%>%summarise(total=sum(count))%>%filter(rank(desc(total))<=10)
+TotalBabies
+```
  
