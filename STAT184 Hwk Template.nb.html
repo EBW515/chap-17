@@ -232,7 +232,7 @@ summary {
 <div id="assigned-exercises" class="section level2">
 <h2>Assigned Exercises</h2>
 <ul>
-<li>DC Chapter 17 Exercises: 17.1</li>
+<li>DC Chapter 17 Exercises: 17.1,17.3,17.4,17.5,17.7</li>
 </ul>
 </div>
 <div id="front-matter" class="section level2">
@@ -350,7 +350,20 @@ The following object is masked from ‘package:base’:
 <h2>Chapter 1 Exercises</h2>
 <div id="problem-17.1" class="section level3">
 <h3>Problem 17.1</h3>
-<p>b.)</p>
+<p>a.)</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVnZXg8LSBcIi4qKFthZWlvdV0pJFwiXG5ib3lfbmFtZXM8LUJhYnlOYW1lcyU+JWdyb3VwX2J5KG5hbWUpJT4lZmlsdGVyKGdyZXBsKHBhdHRlcm4gPSByZWdleCxuYW1lKSxzZXg9PVwiTVwiKSU+JXN1bW1hcmlzZShzPXN1bShjb3VudCkpJT4lZmlsdGVyKHJhbmsoZGVzYyhzKSk8PTEwKVxucmVnZXhcbmBgYCJ9 -->
+<pre class="r"><code>regex&lt;- &quot;.*([aeiou])$&quot;
+boy_names&lt;-BabyNames%&gt;%group_by(name)%&gt;%filter(grepl(pattern = regex,name),sex==&quot;M&quot;)%&gt;%summarise(s=sum(count))%&gt;%filter(rank(desc(s))&lt;=10)
+regex</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiLiooW2FlaW91XSkkXCJcbiJ9 -->
+<pre><code>[1] &quot;.*([aeiou])$&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>b.) There seems to be no results for this</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQmFieU5hbWVzJT4lXG4gIGdyb3VwX2J5KHNleCxuYW1lKSU+JVxuICBmaWx0ZXIoZ3JlcGwoXCJcXFxcc1wiLCBuYW1lKSklPiVcbiAgc3VtbWFyaXNlKHRvdGFsPXN1bShjb3VudCkpJT4lXG4gIGFycmFuZ2UoZGVzYyh0b3RhbCkpJT4lXG4gIGhlYWQoMTApXG5gYGAifQ== -->
@@ -361,7 +374,7 @@ The following object is masked from ‘package:base’:
   arrange(desc(total))%&gt;%
   head(10)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImdyb3VwZWRfZGYiLCJ0YmxfZGYiLCJ0YmwiLCJkYXRhLmZyYW1lIl0sIm5jb2wiOjMsIm5yb3ciOjB9LCJyZGYiOiJVa1JZTWdwWUNnQUFBQUlBQXdRQkFBSURBQUFBQkFJQUFBQUJBQVFBQ1FBQUFBRjRBQUFERXdBQUFBTUFBQUFRQUFBQUFBQUFBQkFBQUFBQUFBQUFEUUFBQUFBQUFBUUNBQUFBQVFBRUFBa0FBQUFGYm1GdFpYTUFBQUFRQUFBQUF3QUVBQWtBQUFBRGMyVjRBQVFBQ1FBQUFBUnVZVzFsQUFRQUNRQUFBQVYwYjNSaGJBQUFCQUlBQUFBQkFBUUFDUUFBQUFseWIzY3VibUZ0WlhNQUFBQU5BQUFBQUFBQUJBSUFBQUFCQUFRQUNRQUFBQVZqYkdGemN3QUFBQkFBQUFBQkFBUUFDUUFBQUFwa1lYUmhMbVp5WVcxbEFBQUEvZ0FBQkFJQUFBQUJBQVFBQ1FBQUFBZHZjSFJwYjI1ekFBQUNFd0FBQUFVQUFBQVFBQUFBQVFBRUFBa0FBQUFCY2dBQUFCQUFBQUFCQUFRQUNRQUFBQTkxYm01aGJXVmtMV05vZFc1ckxUTUFBQUFLQUFBQUFRQUFBQUFBQUFBTkFBQUFBUUFBQUFBQUFBQU5BQUFBQVFBQUFBTUFBQVFDQUFBQy93QUFBQkFBQUFBRkFBUUFDUUFBQUFabGJtZHBibVVBQkFBSkFBQUFCV3hoWW1Wc0FBUUFDUUFBQUE1eWIzZHVZVzFsY3k1d2NtbHVkQUFFQUFrQUFBQUtjbTkzY3k1MGIzUmhiQUFFQUFrQUFBQUtZMjlzY3k1MGIzUmhiQUFBQVA0QUFBRCsifQ== -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImdyb3VwZWRfZGYiLCJ0YmxfZGYiLCJ0YmwiLCJkYXRhLmZyYW1lIl0sIm5jb2wiOjMsIm5yb3ciOjB9LCJyZGYiOiJVa1JZTWdwWUNnQUFBQUlBQXdRQkFBSURBQUFBQkFJQUFBQUJBQVFBQ1FBQUFBRjRBQUFERXdBQUFBTUFBQUFRQUFBQUFBQUFBQkFBQUFBQUFBQUFEUUFBQUFBQUFBUUNBQUFBQVFBRUFBa0FBQUFGYm1GdFpYTUFBQUFRQUFBQUF3QUVBQWtBQUFBRGMyVjRBQVFBQ1FBQUFBUnVZVzFsQUFRQUNRQUFBQVYwYjNSaGJBQUFCQUlBQUFBQkFBUUFDUUFBQUFseWIzY3VibUZ0WlhNQUFBQU5BQUFBQUFBQUJBSUFBQUFCQUFRQUNRQUFBQVZqYkdGemN3QUFBQkFBQUFBQkFBUUFDUUFBQUFwa1lYUmhMbVp5WVcxbEFBQUEvZ0FBQkFJQUFBQUJBQVFBQ1FBQUFBZHZjSFJwYjI1ekFBQUNFd0FBQUFVQUFBQVFBQUFBQVFBRUFBa0FBQUFCY2dBQUFCQUFBQUFCQUFRQUNRQUFBQkIxYm01aGJXVmtMV05vZFc1ckxURXpBQUFBQ2dBQUFBRUFBQUFBQUFBQURRQUFBQUVBQUFBQUFBQUFEUUFBQUFFQUFBQURBQUFFQWdBQUF2OEFBQUFRQUFBQUJRQUVBQWtBQUFBR1pXNW5hVzVsQUFRQUNRQUFBQVZzWVdKbGJBQUVBQWtBQUFBT2NtOTNibUZ0WlhNdWNISnBiblFBQkFBSkFBQUFDbkp2ZDNNdWRHOTBZV3dBQkFBSkFBQUFDbU52YkhNdWRHOTBZV3dBQUFEK0FBQUEvZz09In0= -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["sex"],"name":[1],"type":["chr"],"align":["left"]},{"label":["name"],"name":[2],"type":["chr"],"align":["left"]},{"label":["total"],"name":[3],"type":["int"],"align":["right"]}],"data":[],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[0]},"pages":{}}}
@@ -373,21 +386,22 @@ The following object is masked from ‘package:base’:
 <p>c.)</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQmFieU5hbWVzJT4lXG4gIGZpbHRlcihncmVwbChcblxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQmFieU5hbWVzJT4lXG4gIGdyb3VwX2J5KG5hbWUpJT4lXG4gIGZpbHRlcihncmVwbChcIkpvZSR8am9lJFwiLCBuYW1lKSklPiVcbiAgc3VtbWFyaXNlKHRvdGFsPXN1bShjb3VudCkpJT4lXG4gIGFycmFuZ2UoZGVzYyh0b3RhbCkpJT4lXG4gIGhlYWQoMTApXG5cbmBgYCJ9 -->
 <pre class="r"><code>BabyNames%&gt;%
-  filter(grepl(
+  group_by(name)%&gt;%
+  filter(grepl(&quot;Joe$|joe$&quot;, name))%&gt;%
+  summarise(total=sum(count))%&gt;%
+  arrange(desc(total))%&gt;%
+  head(10)
 </code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-</div>
-<div id="problem-1.2" class="section level3">
-<h3>Problem 1.2</h3>
 <!-- rnb-text-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiU1RBVCAxODQgSG9tZXdvcmsgRXhlcmNpc2VzIiAKc3VidGl0bGU6ICJEYXRhQ29tcHV0aW5nIENoYXB0ZXJzIDE3IgphdXRob3I6ICJlcmljIHdlYWgiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCiMjIEFzc2lnbmVkIEV4ZXJjaXNlcwoKLSBEQyBDaGFwdGVyIDE3IEV4ZXJjaXNlczogMTcuMQoKCiMjIEZyb250IE1hdHRlcgoKYGBge3J9CiMgY2xlYW4gdXAgd29ya3NwYWNlIGVudmlyb25tZW50CnJtKGxpc3QgPSBscygpKQoKIyBhbGwgcGFja2FnZXMgdXNlZCBmb3IgdGhlIGFzc2lnbm1lbnQKbGlicmFyeShtb3NhaWMpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KERhdGFDb21wdXRpbmcpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KHRpZHlyKQpsaWJyYXJ5KGx1YnJpZGF0ZSkKCmBgYAoKCgojIyBDaGFwdGVyIDEgRXhlcmNpc2VzCgojIyMgUHJvYmxlbSAxNy4xCmIuKQpgYGB7cn0KQmFieU5hbWVzJT4lCiAgZ3JvdXBfYnkoc2V4LG5hbWUpJT4lCiAgZmlsdGVyKGdyZXBsKCJcXHMiLCBuYW1lKSklPiUKICBzdW1tYXJpc2UodG90YWw9c3VtKGNvdW50KSklPiUKICBhcnJhbmdlKGRlc2ModG90YWwpKSU+JQogIGhlYWQoMTApCgpgYGAKYy4pCmBgYHtyfQpCYWJ5TmFtZXMlPiUKICBmaWx0ZXIoZ3JlcGwoCgpgYGAKCgojIyMgUHJvYmxlbSAxLjIKCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiU1RBVCAxODQgSG9tZXdvcmsgRXhlcmNpc2VzIiAKc3VidGl0bGU6ICJEYXRhQ29tcHV0aW5nIENoYXB0ZXJzIDE3IgphdXRob3I6ICJlcmljIHdlYWgiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCiMjIEFzc2lnbmVkIEV4ZXJjaXNlcwoKLSBEQyBDaGFwdGVyIDE3IEV4ZXJjaXNlczogMTcuMSwxNy4zLDE3LjQsMTcuNSwxNy43CgoKIyMgRnJvbnQgTWF0dGVyCgpgYGB7cn0KIyBjbGVhbiB1cCB3b3Jrc3BhY2UgZW52aXJvbm1lbnQKcm0obGlzdCA9IGxzKCkpCgojIGFsbCBwYWNrYWdlcyB1c2VkIGZvciB0aGUgYXNzaWdubWVudApsaWJyYXJ5KG1vc2FpYykKbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkoRGF0YUNvbXB1dGluZykKbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkodGlkeXIpCmxpYnJhcnkobHVicmlkYXRlKQoKYGBgCgoKCiMjIENoYXB0ZXIgMSBFeGVyY2lzZXMKCiMjIyBQcm9ibGVtIDE3LjEKYS4pCmBgYHtyfQpyZWdleDwtICIuKihbYWVpb3VdKSQiCmJveV9uYW1lczwtQmFieU5hbWVzJT4lZ3JvdXBfYnkobmFtZSklPiVmaWx0ZXIoZ3JlcGwocGF0dGVybiA9IHJlZ2V4LG5hbWUpLHNleD09Ik0iKSU+JXN1bW1hcmlzZShzPXN1bShjb3VudCkpJT4lZmlsdGVyKHJhbmsoZGVzYyhzKSk8PTEwKQpyZWdleApgYGAKCmIuKSBUaGVyZSBzZWVtcyB0byBiZSBubyByZXN1bHRzIGZvciB0aGlzIApgYGB7cn0KQmFieU5hbWVzJT4lCiAgZ3JvdXBfYnkoc2V4LG5hbWUpJT4lCiAgZmlsdGVyKGdyZXBsKCJcXHMiLCBuYW1lKSklPiUKICBzdW1tYXJpc2UodG90YWw9c3VtKGNvdW50KSklPiUKICBhcnJhbmdlKGRlc2ModG90YWwpKSU+JQogIGhlYWQoMTApCgpgYGAKYy4pCmBgYHtyfQpCYWJ5TmFtZXMlPiUKICBncm91cF9ieShuYW1lKSU+JQogIGZpbHRlcihncmVwbCgiSm9lJHxqb2UkIiwgbmFtZSkpJT4lCiAgc3VtbWFyaXNlKHRvdGFsPXN1bShjb3VudCkpJT4lCiAgYXJyYW5nZShkZXNjKHRvdGFsKSklPiUKICBoZWFkKDEwKQoKYGBgCgo=</div>
 
 
 

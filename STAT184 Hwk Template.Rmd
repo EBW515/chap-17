@@ -7,7 +7,7 @@ output: html_notebook
 
 ## Assigned Exercises
 
-- DC Chapter 17 Exercises: 17.1
+- DC Chapter 17 Exercises: 17.1,17.3,17.4,17.5,17.7
 
 
 ## Front Matter
@@ -31,7 +31,14 @@ library(lubridate)
 ## Chapter 1 Exercises
 
 ### Problem 17.1
-b.)
+a.)
+```{r}
+regex<- ".*([aeiou])$"
+boy_names<-BabyNames%>%group_by(name)%>%filter(grepl(pattern = regex,name),sex=="M")%>%summarise(s=sum(count))%>%filter(rank(desc(s))<=10)
+regex
+```
+
+b.) There seems to be no results for this 
 ```{r}
 BabyNames%>%
   group_by(sex,name)%>%
@@ -44,11 +51,11 @@ BabyNames%>%
 c.)
 ```{r}
 BabyNames%>%
-  filter(grepl(
+  group_by(name)%>%
+  filter(grepl("Joe$|joe$", name))%>%
+  summarise(total=sum(count))%>%
+  arrange(desc(total))%>%
+  head(10)
 
 ```
-
-
-### Problem 1.2
-
 
