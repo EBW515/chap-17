@@ -59,3 +59,19 @@ BabyNames%>%
 
 ```
 
+
+### Problem 17.3
+ this string is for a phone number. the digits are being extracted.
+ 
+### Problem 17.4
+a.) the strings will be 2 characters 
+b.) the matches will be the same amount as there are us states and territories 
+c.) U.S state abbreviation
+### Problem 17.5
+a.)
+```{r}
+BibleNames <- 
+  readr::read_csv("http://tiny.cc/dcf/BibleNames.csv")
+```
+
+ 
